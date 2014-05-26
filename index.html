@@ -1,100 +1,398 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>blog by tamadra</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamadra's blog</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>blog</h1>
-        <p></p>
+<!-- Bootstrap css modified to include main.css -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    padding: 0; margin: 0; height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+.article {
+    margin: 50px auto 0;
+    padding-bottom: 100px;
+}
+.footer {
+    width:100%;
+    text-align: center;
+    height:50px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    clear: both;
+}
+.width640 {
+    width: 640px;
+}
+#navigation-mobile a{
+    color: white;
+}
+#navigation-mobile a:hover{
+    color: #DE5E60;
+}
+#navigation-mobile ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+.container {
+    padding-left: 0; padding-right: 0;
+}
+.row {
+    margin-left: 0; margin-right: 0;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 0; padding-right: 0;
+}
+.clear {
+    clear: both;
+}
+th {
+    font-weight: normal;
+    color: #7F8289;
+}
+td {
+    font-weight: 600;
+}
+h4 {
+    margin-bottom: 10px;
+}
+ul {
+    padding-left: 30px;;
+}
 
-        <p class="view"><a href="https://github.com/tamadra/blog">View the Project on GitHub <small>tamadra/blog</small></a></p>
+
+.entry-title {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #4C4F55;
+    margin-bottom: 5px;
+}
+.entry-subtitle {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #4C4F55;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+pre {
+    margin: 10px 0 30px 10px;
+    padding: 20px;
+}
+.demo-container {
+    box-sizing: border-box;
+    width: 640px;
+    height: 475px;
+    padding: 20px 15px 15px 15px;
+    margin: 15px auto 30px auto;
+    border: 1px solid #ddd;
+    background: #fff;
+    background: linear-gradient(#f6f6f6 0, #fff 50px);
+    background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+    background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+    background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+    background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    -o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.demo-placeholder {
+    width: 100%;
+    height: 385px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+#navigation-mobile li a {
+    padding: 12px 0;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<div class="header">
+    <div style="width: 100%; background-color: #26292E;">
+        <div>
+            <a id="mobile-nav" style="float: right; margin-right: 20px; display: block;" class="menu-nav" href="#menu-nav"></a>
+
+            <div style="height: 60px;">
+                <h2 style="margin-left: 30px; line-height: 58px; font-size: 28px; margin-bottom:0; color: white;" >
+                    <span style="color:#DE5E60; font-size: 21px;" class="font-fix">&#xe06c;</span> Tamadra's Blog
+                <span style="color:#7F8289; font-size: 18px; margin-left:15px;">adventures in Puzzle & Dragons</span>
+                </h2>
+            </div>
 
 
-        <ul>
-          <li><a href="https://github.com/tamadra/blog/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/tamadra/blog/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/tamadra/blog">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+            <div id="navigation-mobile" style="display: none;">
+                <ul id="menu-nav-mobile">
+                    <li><a href="/s-rank" class="external">S-Rank Calculator</a></li>
+                    <li><a href="/blog" class="external">Rank Up!</a></li>
+                </ul>
+            </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/tamadra">tamadra</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-    
-    <!-- START: Livefyre Embed -->
-<div id="livefyre-comments"></div>
-<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+</div>
+
+
+<div class="article">
+<div class="container width640">
+
+    <div class="row" style=""  >
+        <div class="col-md-12">
+
+
+            <article class="post">
+                <h2 class="entry-title">
+                    Which dungeon to run?
+                </h2>
+                <h3 class="entry-subtitle">The (surprisingly) difficult task of optimizing EXP/stamina in PAD</h3>
+                <div class="entry-meta" style="border-bottom: 1px dashed #e1e1e1;">
+                    By Tamadra<span class="divider">/</span><span class="published">May 26, 2014</span>
+                </div>
+
+                <div class="entry-content" style="margin-top: 35px;">
+                    <p>In the last 4 months I've been playing Puzzle & Dragons, I've frequently found myself in one of two similar situations:</p>
+
+                    <p>
+                        <ul>
+                    <li>I need 9,842 EXP to rank up. What dungeons should I run to rank me up?</li>
+                    <li>I have 22 stamina to use up before bed.  Which dungeons should I run to spend it most efficiently?</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        And each time, I would pull up my go-to <a href="http://www.puzzledragonx.com/en/normal-dungeons.asp">reference page</a> on PDX
+
+                        and browse through it, looking for the best combination of dungeons.
+                    </p>
+
+                    <p>After a while of doing this simple, yet repetitive task, I decided a tool should exist to make this process easier and better.
+                    </p>
+
+                    <h3>A Puzzling problem</h3>
+                    <p>
+                        Finding the most EXP-efficient dungeons is relatively simple for lower stamina amounts.
+                        Here's a chart of which dungeon is the best for stamina amounts less than 17:
+                    </p>
+
+                    <div class="demo-container">
+                        <div style="width: 100%; text-align: center; font-weight: 600;">Most efficient dungeons by stamina (no bonus events)<br>
+                        <span style="font-weight: 300;">(hover to see more information)</span></div>
+                        <div id="placeholder" class="demo-placeholder"></div>
+                    </div>
+
+
+                    <p>
+                        But for larger stamina amounts, the problem of figuring out the most efficient <i>combination</i> of dungeons can be surprisingly tricky.
+                        The reason for this is because choosing which dungeon to run in PAD is a resource-allocation problem that falls under a category
+                        called <a href="http://en.wikipedia.org/wiki/Knapsack_problem">Knapsack problems</a>. Briefly described, knapsack problems are situations where an array of choices are available.
+                        Each choice has an associated value (EXP in this case) and an associated cost (Stamina in this case).
+                        The problem is how to stuff your knapsack of a certain fixed total size with the choices available to maximize the total value.
+                    </p>
+                    <p>
+                        Knapsack problems are interesting in computer science and mathematics primarily because they are hard to solve.
+                        Optimizing and solving for the ideal solution is <a href="http://en.wikipedia.org/wiki/NP-hard">NP-hard</a>, meaning no algorithm exists that is "fast" in its run-time.
+                        Put another way, the run-time for finding the solution for an arbitrarily large knapsack, with an arbitrarily large number of choice scales (more or less) exponentially!
+                    </p>
+                    <p>
+                        Fortunately, the world of PAD is not arbitrarily large, but is in fact constrained to 166 Dungeons
+                        (167 if you count Celestial Black Dragon).
+                        And so, solving for just these dungeons and any reasonably large stamina amount is more than doable, even in our dinky browsers or mobile devices.
+                    </p>
+                    <p>
+                        If you're curious, here's a quite readable description of the actual algorithm to solve the problem we've described so far: <a href="http://en.wikipedia.org/wiki/Knapsack_problem#Unbounded_knapsack_problem">http://en.wikipedia.org/wiki/Knapsack_problem#Unbounded_knapsack_problem</a>
+                    </p>
+
+                    <h3>Isn't average EXP/stamina enough?</h3>
+
+                    <p>
+                        While average EXP/stamina is a good measure of a dungeon's efficiency, it is only effective in
+                        selecting a dungeon when you have an infinite amount of stamina.
+                    </p>
+                    <p>
+                        For example, if you haven't cleared Starlight Sanctuary yet (like me), the most efficient,
+                        highest EXP/stamina dungeon is Hyperion Lava Flow - Lava Tube.
+                        It costs 10 stamina to run. If you had 25 stamina, here are 2 options:
+                        </p>
+                    <p class="margin-15">
+                        Option 1:
+                    </p>
+<pre>
+Hyperion Lava Flow - Lava Tube           10 Stamina     5,276 EXP    528 EXP/Stam
+Hyperion Lava Flow - Lava Tube           10 Stamina     5,276 EXP    528 EXP/Stam
+Tower of Giants - Dragons of the Tower    5 Stamina     1,542 EXP    308 EXP/Stam
+
+Total:                                   25 Stamina    12,094 EXP
+</pre>
+<p class="margin-15">
+Option 2:
+</p>
+<pre>
+Frozen Soil of Prosell - Frozen Ground   13 Stamina     6,745 EXP    519 EXP/Stam
+Kronos Forest - Ancient Guardian         12 Stamina     6,307 EXP    526 EXP/Stam
+
+Total:                                   25 Stamina    13,052 EXP</pre>
+
+
+                    <p>
+                        Here we see that simply trying to run the highest EXP/Stam dungeons first is not always the most efficient solution. Even though Lava Tube is the most single efficient EXP/Stam dungeon, it is better in this scenario to "stuff your knapsack" with a 13-stamina and a 12-stamina dungeon.
+                    </p>
+                    <p>
+                        Now, this isn't always the case. Many times it is most efficient to run the highest EXP/Stam dungeons.
+    There simply is no rule-of-thumb that works in every situation for choosing the best dungeons to stuff your knapsack. That's also the trickiness behind these knapsack problems.
+    <br>The solution? Just let the Rank Up calculator find the optimum solution for you :).
+                    </p>
+                    <h3>Enough talk!</h3>
+                    <p>
+                        Give the calculator a try here: <a href="http://tamadra.github.io/rank-up">http://tamadra.github.io/rank-up</a>
+                    </p>
+                    <p>
+                        Feedback and bug reports are much appreciated. Either post them below in the comments, on my reddit thread, or in the github page.
+                    </p>
+                    <p>
+                        Thanks for reading!
+                        <br>
+                        <img src="http://tamadra.github.io/s-rank/img/trans_tamadra.png">
+                    </p>
+                </div>
+
+                <!-- START: Livefyre Embed -->
+                <div id="livefyre-comments"></div>
+                <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+                <script type="text/javascript">
+                    (function () {
+                        var articleId = fyre.conv.load.makeArticleId(null);
+                        fyre.conv.load({}, [{
+                            el: 'livefyre-comments',
+                            network: "livefyre.com",
+                            siteId: "359294",
+                            articleId: articleId,
+                            signed: false,
+                            collectionMeta: {
+                                articleId: articleId,
+                                url: fyre.conv.load.makeCollectionUrl(),
+                            }
+                        }], function() {});
+                    }());
+                </script>
+                <style>
+                    .fyre-help {display: none;}
+                </style>
+                <!-- END: Livefyre Embed -->
+
+            </article>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="clear"></div>
+</div>
+
+<div class="footer">
+
+    /<a href="http://www.reddit.com/user/kh_2008/">reddit</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <span class="font-fix">&#xe02a;</span> @<a href="https://twitter.com/_tamadra">_tamadra</a>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/vendors.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
 <script type="text/javascript">
-(function () {
-    var articleId = fyre.conv.load.makeArticleId(null);
-    fyre.conv.load({}, [{
-        el: 'livefyre-comments',
-        network: "livefyre.com",
-        siteId: "359294",
-        articleId: articleId,
-        signed: false,
-        collectionMeta: {
-            articleId: articleId,
-            url: fyre.conv.load.makeCollectionUrl(),
-        }
-    }], function() {});
-}());
+    $('#mobile-nav').on('click', function(e){
+        $(this).toggleClass('open');
+        $('#navigation-mobile').stop().slideToggle(350);
+        e.preventDefault();
+    });
+
+    function numberWithCommas(x) { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+
+    var dName = ["No available dungeon",
+        "No available dungeon",
+        "The Tower of Trials - Dual Weapons",
+        "The Tower of Trials - Dual Weapons",
+        "Tower of Giants - Dragons of the Tower",
+        "Tower of Giants - Dragons of the Tower",
+        "Sea Cave Mercury - The Fanged Warriors",
+        "Twin Temple Apollo - Sunlight Dragon",
+        "Tower of Flare - Flare Knights",
+        "Hyperion Lava Flow - Lava Tube",
+        "Clayus Prison - Well Leading Underground",
+        "Kronos Forest - Ancient Guardian",
+        "Frozen Soil of Prosell - Frozen Ground",
+        "Starlight Sanctuary - Queen of the Gods",
+        "Starlight Sanctuary - Queen of the Gods",
+        "Starlight Sanctuary - Queen of the Gods",
+        "Starlight Sanctuary - King of the Gods"];
+    $(function() {
+        var d2 = [
+            [1, 0],
+            [2, 0],
+            [3, 295],
+            [4, 295],
+            [5, 1542],
+            [6, 1542],
+            [7, 1751],
+            [8, 1991],
+            [9, 2779],
+            [10, 5276],
+            [11, 5768],
+            [12, 6307],
+            [13, 6745],
+            [14, 8900],
+            [15, 8900],
+            [16, 8900],
+            [17, 13900]
+        ];
+        $.plot("#placeholder", [{
+            data: d2,
+            bars: { show: true, align: "center", hoverable: true }
+        }], {
+            grid: { hoverable: true, clickable: true},
+            xaxis: {tickSize: 1, tickLength: 0, tickFormatter: function(val, axis) { return val;}
+            }
+        });
+
+        $("<div id='tooltip'></div>").css({
+            position: "absolute",
+            display: "none",
+            border: "1px solid #fdd",
+            padding: "5px 15px",
+            "background-color": "#afd8f8",
+            opacity: 0.80,
+            color: "black"
+        }).appendTo("body");
+
+        $("#placeholder").bind("plothover", function (event, pos, item) {
+            if (item) {
+                $("#tooltip").html(dName[item.datapoint[0] - 1]+"<br>"+
+                                item.datapoint[0] + " Stamina&nbsp;&nbsp;&nbsp;&nbsp;" +
+                                numberWithCommas(item.datapoint[1]) + " EXP"
+                        )
+                        .css({top: item.pageY - 75, left: item.pageX-40})
+                        .fadeIn(200);
+            } else {
+                $("#tooltip").hide();
+            }
+
+        });
+    });
 </script>
-<!-- END: Livefyre Embed -->
-            
-            
-    
-    
-    
-    
-    
-    
-  </body>
+</div>
+</body>
 </html>
